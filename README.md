@@ -10,21 +10,58 @@
 
 ## Overview
 
-...
+PySSD is an implementation of a [Single-Shot-Detector](https://arxiv.org/abs/1512.02325) in Tensorflow, and functions as a basic library as well.
+
+It is meant to be used as either a standalone program or included as part of a larger workflow, and has all the supported functions required to implement it into any project such as labelmap parsing and modular output access methods. Please feel free to improve upon it or rework it however you wish.
+
 <br></br>
 
 ## Requirements
 
-**Tensorflow (2.X)**
+**Model & Configuration Files**
+
+To use this library, it is required that you utilize a trained SSD model.<br>
+(e.g. https://tfhub.dev/tensorflow/ssd_mobilenet_v2/2)
+
+This library utilizes the `savedModel` format, but depending on the model you choose, other things such as how certain values of the output are accessed may change as well. By default, you are able to alter how the values are parsed in the returned output from a forward pass using the aforementioned model by changing the following constants defined in `__int__.py` of the `PySSD` module:
+```Python
+# Set the variables for indexing into the 
+# return data-structure of the model forward-pass
+NET_FORMAT_NUMDET  = 'num_detections'
+NET_FORMAT_BOXES   = 'detection_boxes'
+NET_FORMAT_CLASSES = 'detection_classes'
+NET_FORMAT_SCORES  = 'detection_scores'
 ```
+<br>
+Additionally, the model will likely also require a labelmap that can be parsed with the tools included in the module.
+<br>
+For the aforementioned model (which is trained on COCO images), you can use the COCO labelmap available in many repositories online.
+
+To specify the labelmap file, set the following constant in the `__init__.py` of the `PySSD` module:
+```Python
+LMF_PATH = 'mscoco_label_map.pbtxt'
+```
+<br></br>
+
+**Tensorflow (2.6.0-3)**
+```sh
 pacman -S python-tensorflow
 ```
 Please see dependencies listed [here](https://aur.archlinux.org/packages/python-tensorflow-git/).
-<br></br>
 
-**Model Files**
-<br></br>
-...
+
+**NumPy (1.20.3-1)**
+```sh
+pacman -S python-numpy
+```
+Please see dependencies listed [here](https://archlinux.org/packages/extra/x86_64/python-numpy/).
+
+
+**Pillow (8.3.1-1)**
+```sh
+pacman -S python-pillow
+```
+Please see dependencies listed [here](https://archlinux.org/packages/community/x86_64/python-pillow/).
 <br></br>
 
 ## Usage
