@@ -1,22 +1,27 @@
 <h1 align="center">PySSD</h1> 
   <p align="center">
     A Tensorflow Single-Shot-Detector implementation
-    <br/><br/><br/>
+    <br/><br/>
     [<a href="https://www.tensorflow.org/">Tensorflow</a>]
     [<a href="https://github.com/Haskili/PySSD#acknowledgements">Acknowledgements</a>]
     [<a href="https://github.com/Haskili/PySSD/issues">Issues</a>]
+    <br/><br/><br/>
+    <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/TensorFlowLogo.svg/1200px-TensorFlowLogo.svg.png" alt ="" width="10%" height="10%">
+    <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLgwjF2JFQ-jvZn53x4bIhemYv7dLQKROIVg&usqp=CAU" alt ="" width="20%" height="20%">
   </p>
 </p>
 
 ## Overview
 
-PySSD is an implementation of a [Single-Shot-Detector](https://arxiv.org/abs/1512.02325) in Tensorflow, and functions as a basic library as well.
+PySSD is an implementation of a [Single-Shot-Detector](https://arxiv.org/abs/1512.02325) (SSD) in Tensorflow, and functions as a basic library as well. 
+
+An SSD is a multibox detector that classifies objects within an image. In my previous projects I have experienced working with both SSD's and You-Only-Look-Once (YOLO) using the OpenCV 4.X library and utilizing pretrained models/configurations. However, this is a much more pure and basic implementation of something that would be more functionally more portable.
 
 <br>
 <p align="center"><img src = "https://github.com/Haskili/PySSD/blob/main/Images/example_result.png" alt ="" width="30%" height="30%"></p>
 <br>
 
-It is meant to be used as either a standalone program or included as part of a larger workflow, and has all the supported functions required to implement it into any project such as labelmap parsing and modular output access methods. Please feel free to improve upon it or rework it however you wish.
+It is meant to be used as either a standalone program to experiment with or included as part of a larger workflow. Included are all the supporting functions required to implement it into any project with relative ease, such as labelmap parsing and modular output-access methods that clearly depict the way the results are being handled.
 
 <br></br>
 
@@ -47,12 +52,15 @@ LMF_PATH = 'mscoco_label_map.pbtxt'
 ```
 <br></br>
 
+## Dependencies
+
 **Tensorflow (2.6.0-3)**
 ```sh
 pacman -S python-tensorflow
 ```
 Please see dependencies listed [here](https://aur.archlinux.org/packages/python-tensorflow-git/).
 
+<br>
 
 **NumPy (1.20.3-1)**
 ```sh
@@ -60,12 +68,14 @@ pacman -S python-numpy
 ```
 Please see dependencies listed [here](https://archlinux.org/packages/extra/x86_64/python-numpy/).
 
+<br>
 
 **Pillow (8.3.1-1)**
 ```sh
 pacman -S python-pillow
 ```
 Please see dependencies listed [here](https://archlinux.org/packages/community/x86_64/python-pillow/).
+
 <br></br>
 
 ## Usage
