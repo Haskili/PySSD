@@ -12,6 +12,10 @@
 
 PySSD is an implementation of a [Single-Shot-Detector](https://arxiv.org/abs/1512.02325) in Tensorflow, and functions as a basic library as well.
 
+<br>
+<img src = "https://github.com/Haskili/PySSD/blob/main/Images/example_result.png" alt ="" width="100%" height="100%">
+<br>
+
 It is meant to be used as either a standalone program or included as part of a larger workflow, and has all the supported functions required to implement it into any project such as labelmap parsing and modular output access methods. Please feel free to improve upon it or rework it however you wish.
 
 <br></br>
