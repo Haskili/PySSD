@@ -14,15 +14,15 @@
 
 ## Overview
 
-PySSD is an implementation of a [Single-Shot-Detector](https://arxiv.org/abs/1512.02325) (SSD) in Tensorflow, and functions as a basic library as well. 
-
-An SSD is a multibox detector that classifies objects within an image. In my previous projects I have experienced working with both SSD's and You-Only-Look-Once (YOLO) using the OpenCV 4.X library and utilizing pretrained models/configurations. However, this is a much more pure and basic implementation of something that would be more functionally more portable.
+PySSD is an example implementation of a [Single-Shot-Detector](https://arxiv.org/abs/1512.02325) (SSD) in Tensorflow encapsulated as bare-bones library. 
 
 <br>
 <p align="center"><img src = "https://github.com/Haskili/PySSD/blob/main/Images/example_result.png" alt ="" width="30%" height="30%"></p>
 <br>
 
-It is meant to be used as either a standalone program to experiment with or included as part of a larger workflow. Included are all the supporting functions required to implement it into any project with relative ease, such as labelmap parsing and modular output-access methods that clearly depict the way the results are being handled.
+It is meant to be used as either a standalone program to experiment with, or included as part of a larger workflow. All the supporting functions required to implement it into any project with relative ease are found within the library file, such as labelmap parsing and modularized output access methods that clearly depict the way the results are being handled.
+
+Aditionally, it can be tweaked to work with other network types such as [Region-based Convolutional Neural Network](https://www.telesens.co/2018/03/11/object-detection-and-classification-using-r-cnns/#Image_Pre-Processing) (RCNN) or [You-Only-Look-Once](https://pylessons.com/YOLOv4-TF2-introduction) (YOLO).
 
 <br></br>
 
